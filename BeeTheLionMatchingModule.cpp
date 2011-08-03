@@ -17,9 +17,13 @@ int main()
 	ifstream inFile;
 	int count = 0;
 
+<<<<<<< HEAD
 	// Find number of photos.
 	// ======================
 	inFile.open(strFNameFlowerDB);
+=======
+	inFile.open(strFNameFlowerDB.c_str());
+>>>>>>> aec665ed8f61b4ac895b5398464ef485ee5d1410
 	while(inFile >> strFNameFlower)
 	{
 		count++;
