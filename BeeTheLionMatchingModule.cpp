@@ -16,7 +16,7 @@ int main()
 	ifstream inFile;
 	int count = 0;
 
-	inFile.open(strFNameFlowerDB);
+	inFile.open(strFNameFlowerDB.c_str());
 	while(inFile >> strFNameFlower)
 	{
 		count++;
