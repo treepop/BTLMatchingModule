@@ -3,6 +3,7 @@
 #include <fstream>
 #include <vector>
 #include <algorithm>
+#include <ctime>
 
 #include <opencv2\core\core.hpp>
 #include <opencv2\highgui\highgui.hpp>
@@ -29,6 +30,8 @@ void ShowResult(const disStruct & rr);
 
 int main()
 {
+	clock_t tmStart = clock();
+	
 	string strDirFlowerDB = "flowerPicDB\\";
 	string strFNameFlowerDB = strDirFlowerDB + "files.txt";
 	string strFNameFlower;
@@ -57,7 +60,7 @@ int main()
 	inFile.close();
 	inFile.clear(); // If not clear() before it will make second while command finished
 					// immediately.
-	cout << "Number of flower photo = " << count << endl;
+	cout << "Number of flower photo = " << count << endl << endl;
 
 	// Extract SURF feature of all photos in the DB.
 	// =============================================
@@ -103,6 +106,10 @@ int main()
 	for_each(similarity.begin(),similarity.end(),ShowResult);
 	outFile.close();
 
+	clock_t tmStop = clock();
+	cout << endl << "Total using time = " << (tmStop - tmStart)/CLOCKS_PER_SEC
+		<< " sec" << endl << "Pass enter to exit.";
+	getchar();
 	return 0;
 }
 

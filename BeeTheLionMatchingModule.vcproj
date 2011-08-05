@@ -115,7 +115,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				Optimization="2"
+				Optimization="3"
 				EnableIntrinsicFunctions="true"
 				AdditionalIncludeDirectories="C:\OpenCV2.3\build\include"
 				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
