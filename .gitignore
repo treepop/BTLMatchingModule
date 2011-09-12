@@ -1,4 +1,6 @@
-BeeTheLionMatchingModule.ncb
-BuildLog.htm
+*.ncb
+Debug/
+Release/
+# BeeTheLionMatchingModule.ncb
 unknownFlower.jpg
 Matches.txt
